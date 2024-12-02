@@ -9,6 +9,7 @@ class MainLayout extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //TODO header 를 appbar 로 사용
       // appBar: AppBar(
       //   title: Text(calendarName),
       // ),
@@ -21,21 +22,32 @@ class MainLayout extends StatelessWidget{
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Expanded(
-                flex: 1,
+                flex: 10,
                 child: Header()
               ),
+
               Expanded(
-                flex: 4,
+                flex: 40,
                 child: CalendarView()
               ),
-              const Divider(height: 2, thickness: 2),
+              
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 10),
+                child: Divider(height: 2, thickness: 2)
+              ),
+            
               Expanded(
-                flex: 4,
+                flex: 40,
                 child: DetailView()
               ),
-              const Divider(height: 2, thickness: 2),
+              
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 10),
+                child: Divider(height: 2, thickness: 2)
+              ),
+
               Expanded(
-                flex: 1,
+                flex: 5,
                 child: Container(
                   color: Colors.red,
                 )
