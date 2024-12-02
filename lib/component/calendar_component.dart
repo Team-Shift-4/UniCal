@@ -1,12 +1,12 @@
 
 import 'package:flutter/material.dart';
 
-class CalendarView extends StatefulWidget{
+class CalendarComponent extends StatefulWidget{
   @override
-  State<CalendarView> createState() => _CalendarViewState();
+  State<CalendarComponent> createState() => _CalendarComponentState();
 }
 
-class _CalendarViewState extends State<CalendarView>{
+class _CalendarComponentState extends State<CalendarComponent>{
   DateTime date = DateTime.now();
 
   @override

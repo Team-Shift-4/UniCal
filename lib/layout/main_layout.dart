@@ -1,7 +1,8 @@
 
+import 'package:calendar/component/detail_edit_component.dart';
 import 'package:calendar/component/header.dart';
-import 'package:calendar/view/calendar_view.dart';
-import 'package:calendar/view/detail_view.dart';
+import 'package:calendar/component/calendar_component.dart';
+import 'package:calendar/component/detail_component.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -16,7 +17,7 @@ class MainLayout extends StatelessWidget{
       body: ChangeNotifierProvider(
         create: (context) => HeaderModel(),
         child: Padding(
-          padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+          padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -28,29 +29,27 @@ class MainLayout extends StatelessWidget{
 
               Expanded(
                 flex: 40,
-                child: CalendarView()
+                child: CalendarComponent()
               ),
               
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 10),
+                padding: EdgeInsets.symmetric(vertical: 15),
                 child: Divider(height: 2, thickness: 2)
               ),
             
               Expanded(
                 flex: 40,
-                child: DetailView()
+                child: DetailComponent()
               ),
               
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 10),
+                padding: EdgeInsets.symmetric(vertical: 15),
                 child: Divider(height: 2, thickness: 2)
               ),
 
               Expanded(
                 flex: 5,
-                child: Container(
-                  color: Colors.red,
-                )
+                child: DetailEditComponent()
               ),
             ],
           ),
