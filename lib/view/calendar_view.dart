@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class CalendarView extends StatefulWidget{
   @override
@@ -12,20 +11,19 @@ class _CalendarViewState extends State<CalendarView>{
 
   @override
   Widget build(BuildContext context) {
-    return Flexible(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Container(
-            color: ColorScheme.dark().onPrimary,
-            child: SizedBox(
-              width: double.infinity,
-              //얘는 double infinity 안됨 ㅋㅋ;;
-              height: 600
-            ),
-          )
-        ],
-      )
-    ) ;
+    // return Container(
+    //       color: ColorScheme.dark().onPrimary,
+    //       // color: Colors.blue,
+    // );
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Container(
+          // color: ColorScheme.dark().onPrimary,
+          color: Colors.blue,
+          // child: Expanded(child: ColoredBox(color: ColorScheme.dark().onPrimary),),
+        )
+      ],
+    );
   }
 }

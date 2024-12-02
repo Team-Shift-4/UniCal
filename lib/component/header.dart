@@ -13,12 +13,10 @@ class Header extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
 
-    return Flexible(
-      child: Consumer<HeaderModel>(
+    return Consumer<HeaderModel>(
         builder: (context,headerModel,child) => AppBar(
           title: Text(getDate(headerModel._mode)),
         )
-      )
     );
   }
 
