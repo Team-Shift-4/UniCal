@@ -23,7 +23,7 @@ class MainLayout extends StatelessWidget{
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Expanded(
-                flex: 10,
+                flex: 5,
                 child: Header()
               ),
 

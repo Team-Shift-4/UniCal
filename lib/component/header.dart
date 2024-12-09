@@ -6,7 +6,7 @@ class Header extends StatelessWidget{
 
   String getDate(String mode){
     final now = DateTime.now();
-    return '$mode ${now.year}-${now.month}-${now.day} ';
+    return 'Calender Name ${now.year}-${now.month}-${now.day} ';
   }
   
 
@@ -15,7 +15,10 @@ class Header extends StatelessWidget{
 
     return Consumer<HeaderModel>(
         builder: (context,headerModel,child) => AppBar(
-          title: Text(getDate(headerModel._mode)),
+          title: Text(
+            getDate(headerModel._mode),
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
         )
     );
   }
