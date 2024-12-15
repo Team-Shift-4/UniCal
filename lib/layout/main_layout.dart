@@ -1,7 +1,7 @@
 
 import 'package:calendar/component/detail_edit_component.dart';
 import 'package:calendar/component/header.dart';
-import 'package:calendar/component/calendar_component.dart';
+import 'package:calendar/component/calendar/calendar_component.dart';
 import 'package:calendar/component/detail_component.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
